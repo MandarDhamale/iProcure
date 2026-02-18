@@ -136,6 +136,8 @@ public class PostController {
 
         System.out.println(post.getId());
         post.setStatus("Active");
+        post.setCountry(post.getCountry());
+        System.out.println("Country: " + post.getCountry());
         postService.save(post);
         System.out.println(post.getId());
         return "redirect:/edit_post/" + post.getId();
